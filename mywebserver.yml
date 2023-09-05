@@ -1,13 +1,16 @@
 ---
-- hosts: all
+- host: all
   become: yes
   tasks: 
-  #apt-get install webserver
+  #apt-get install git
   - name: install webserver on ansible nodes
     apt:
      name: apache2
      state: present
-  - name: install webserver on ansible nodes
+    when: ansible_os_family=="Debian"
+
+  - name: i want to start  webserver
     service:
      name: apache2
      state: started
+    when: ansible_os_family=="Debian"
