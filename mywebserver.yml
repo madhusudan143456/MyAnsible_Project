@@ -15,14 +15,14 @@
      state: started
     when: ansible_os_family=="Debian"
 
-  - name: install webserver on  RedHot ansible nodes
+  - name: install webserver on  RedHat ansible nodes
     dnf:
      name: httpd
      state: present
-    when: ansible_os_family=="RedHot"
+    when: ansible_os_family=="RedHat"
 
-  - name: i want to start RedHot  webserver
+  - name: i want to start RedHat  webserver
     service:
      name: httpd
      state: started
-    when: ansible_os_family=="RedHot"
+    when: ansible_os_family=="RedHat"
