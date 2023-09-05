@@ -1,0 +1,9 @@
+---
+- host: all
+  become: yes
+  tasks: 
+  #apt-get install git
+  - name: install webserver on ansible nodes
+    apt:
+     name: apache2
+     state: present
