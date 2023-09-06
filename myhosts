@@ -3,5 +3,5 @@
 172.31.45.22
 
 [mywebserver:vars]
-mywebpackubuntu=apache22222
+mywebpackubuntu=apache2
 mywebpackredhat=httpd
