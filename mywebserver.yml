@@ -5,24 +5,24 @@
   #apt-get install git
   - name: install webserver on ansible nodes
     apt:
-     name: apache2
+     name: "{{mywebpackubuntu}}"
      state: present
     when: ansible_os_family=="Debian"
 
   - name: i want to start  webserver
     service:
-     name: apache2
+     name: "{{mywebpackubuntu}}"
      state: started
     when: ansible_os_family=="Debian"
 
   - name: install webserver on  RedHat ansible nodes
     dnf:
-     name: httpd
+     name: "{{mywebpackredhat}}"
      state: present
     when: ansible_os_family=="RedHat"
 
   - name: i want to start RedHat  webserver
     service:
-     name: httpd
+     name: "{{mywebpackredhat}}"
      state: started
     when: ansible_os_family=="RedHat"
