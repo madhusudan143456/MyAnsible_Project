@@ -1,0 +1,12 @@
+---
+ - mystudents: 
+     - name: anil
+       phone: 9949654586
+       address:
+         doorno:55
+         pincode:505524
+     - name: madhu
+       phone: 7090598720
+       address:
+         doorno:56
+         pincode:505524
