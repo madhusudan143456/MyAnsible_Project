@@ -1,9 +1,0 @@
----
-- hosts: all
-  become: yes
-  tasks: 
-  #apt-get install wget
-  - name: install wget on ansible nodes
-    apt:
-     name: wget
-     state: present
