@@ -1,0 +1,16 @@
+---
+- hosts: mywebserver
+  become: yes
+  tasks: 
+  #apt-get install git
+  - name: install java on ubuntu nodes
+    apt:
+     name: "{{myjavaonubuntu}}"
+     state: present
+    when: ansible_os_family=="Debian"
+
+  - name: install webserver on  RedHat ansible nodes
+    dnf:
+     name: "{{myjavaonredhat}}"
+     state: present
+    when: ansible_os_family=="RedHat"
