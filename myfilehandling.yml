@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.13.137
+  become: yes
+  tasks: 
+  #apt-get install git
+   - include_tasks: mfile.yml
+   - name: copy files into node side
+     copy:
+        src: mytestfile
+        dest: /home/ubuntu/mytestfile

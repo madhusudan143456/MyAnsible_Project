@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.45.22
+- hosts: 172.31.13.137
   become: yes
   tasks:
    - name: i want execute direct linux
