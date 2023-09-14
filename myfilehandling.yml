@@ -8,3 +8,11 @@
      copy:
         src: mytestfile
         dest: /home/ubuntu/mytestfile
+   - name: i want to install webserver on ansible nodes side
+     apt:
+      name: apache2
+      state: present
+   - name: i want copy index file  into ansible node side
+     template:
+       src:  mydynamicfile.j2
+       dest: /var/www/html/index.html 
