@@ -1,6 +1,6 @@
 ---
  - name: deploy java  app
    get_url:
-     url: https://mys329july23.s3.us-east-2.amazonaws.com/login.war
-     dest: /opt/tomcat/webapps/login.war
+     url: https://mys305nov2023.s3.us-east-2.amazonaws.com/chatgpt-0.1.jar
+     dest: /opt/tomcat/webapps/chatgpt-0.1.jar
      force_basic_auth: yes
